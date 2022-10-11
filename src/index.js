@@ -9,25 +9,23 @@ class Szazlabu{
 }
 
 
-let t = [];
 
 
 document.addEventListener('DOMContentLoaded', () => {
   let tomb = [];
  
-  for (let i = 0; i < 30; i++) {
+  for (let i = 0; i < 20; i++) {
   
-    tomb.push(Math.floor(Math.random() * 30 + 1));
+    let veletlen = Math.floor(Math.random() * 29) + 1;
+    szamok.push(veletlen);
   }
-  tomb.forEach((e) => {
-    console.log(e);
+  document.getElementById('valogat').addEventListener('click', () => {
+    let ottelOszthato = szamok.filter(e => e % 5 === 0);
+  
+    console.log(ottelOszthato);
+    
+  })
+  
   })
    
 
-  
-});
-
-document.getElementById('otteloszthato').addEventListener('click', () => {
-  t.filter(e => e % 5 == 0);
-  
-})
